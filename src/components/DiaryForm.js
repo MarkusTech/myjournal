@@ -27,7 +27,7 @@ export default function DiaryForm({ addItem }) {
                 </div>
                 <textarea value={text} onChange={(event) => setText(event.target.value)} rows="2" className="diary-textarea">
                 </textarea>
-                <button type="submit" className="diary-button">Add Item To Diary</button>
+                <button type="submit" className="diary-button">Save</button>
             </form>
         </div>
     )

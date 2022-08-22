@@ -4,6 +4,14 @@ import DiaryForm from "../components/DiaryForm";
 import { addItem, deleteItem } from "../redux/actions";
 import DiaryItem from "../components/DiaryItem"
 import { Modal } from "react-bootstrap";
+import Toolbar from '@mui/material/Toolbar';
+import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
+import LaptopIcon from '@mui/icons-material/Laptop';
+
 
 export class Main extends Component {
   constructor() {
@@ -18,6 +26,30 @@ export class Main extends Component {
     const { show, activeItem } = this.state
     return (
       <div>
+         <CssBaseline />
+            <AppBar color="secondary" position="static">
+                <Toolbar>
+                    <GitHubIcon sx={
+                        {
+                            marginRight: "1em"
+                        }
+                    } />
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        WMR 
+                    </Typography>
+                    <GitHubIcon  sx={
+                        {
+                            marginRight: "1em"
+                        }
+                    } />
+                    <CodeOffIcon sx={
+                        {
+                            marginRight: "1em"
+                        }
+                    }/>
+                    <LaptopIcon />
+                </Toolbar>
+            </AppBar>
         <div className="grid-container">
           <div className="diary-app">
             <h1>Thoughts for the day</h1>
